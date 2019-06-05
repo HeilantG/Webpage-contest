@@ -2,6 +2,8 @@
 #gtco-header .form-wrap .tab-menu li.active a {
   background: #fff;
   color: #f54c53;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
 }
 a {
   color: deepskyblue;
@@ -24,10 +26,11 @@ a:hover, a:active, a:focus {
 /* 登录框大小位置 */
 #gtco-header {
 	margin-right: 250px;
-	margin-top: 250px;
+	margin-top: 150px;
 	float: right;
   background: skyblue;
 	width: 25%;
+	
 }
 
 #gtco-header .form-wrap .tab-menu {
@@ -62,7 +65,7 @@ a:hover, a:active, a:focus {
   clear: both;
   background: #fff;
   padding: 30px;
-	height: 220px;
+	height: 300px;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
 }
@@ -76,6 +79,7 @@ a:hover, a:active, a:focus {
   background: #f54c53;
   color: #fff;
   border: 0px solid #f54c53 !important;
+	border-radius: 3px;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #f6646a !important;

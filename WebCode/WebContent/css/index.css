@@ -6,51 +6,83 @@ body {
 	line-height: 1.7;
 	background: #ececec;
 }
-input {
-	width: 200px;
+
+/* input 框 */
+.form-control {
+	width: 90%;
 	height: 25px;
 	border: 1px solid #d1d5da;
 	box-shadow: inset 0 1px 2px rgba(27, 31, 35, .075);
 	font-size: 16px;
+	border-radius: 3px;
+	border-radius: 5px;
+	min-height: 20px;
+	padding: 10px;
+	margin-left: 10px;
 }
-/* input 框 */
-  btn{
-            border: 1px solid #ccc;
-            border-radius: 2px;
-            color: #000;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1em;
-            height: 30px;
-            padding: 0 16px;
-            transition: background 0.3s ease-in-out;
-            width: 220px;
-        }
-        input:focus {
-            outline: none;
-            border-color: #9ecaed;
-            box-shadow: 0 0 10px #9ecaed;
-        }
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.selectall{
+	border: 1px solid #d1d5da;
+	box-shadow: inset 0 1px 2px rgba(27, 31, 35, .075);
+	font-size: 16px;
+	border-radius: 3px;
+	border-radius: 5px;
+	min-height: 20px;
+	margin-left: 10px;
+}
+.input_text {
+	font-size: 14px;
+	font-weight: 600 !important;
+	margin-bottom: 5px;
+	text-align: left;
+	line-height: 1.5;
+	color: #24292e !important;
+	margin-left: 10px;
+}
 
-        .button{
-            -webkit-appearance: none;
-            background: #009dff;
-            border: none;
-            border-radius: 2px;
-            color: #fff;
-            cursor: pointer;
-            height: 50px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.2em;
-            letter-spacing: 0.05em;
-            text-align: center;
-            text-transform: uppercase;
-            transition: background 0.3s ease-in-out;
-            width: 100px;
-        }
-        .button:hover {
+btn {
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	color: #000;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	height: 30px;
+	padding: 0 16px;
+	transition: background 0.3s ease-in-out;
+	width: 220px;
+}
 
-            background: #00c8ff;
-        }
+input:focus {
+	outline: none;
+	border-color: #9ecaed;
+	box-shadow: 0 0 10px #9ecaed;
+
+}
+
+.button {
+	-webkit-appearance: none;
+	background: #009dff;
+	border: none;
+	border-radius: 2px;
+	color: #fff;
+	cursor: pointer;
+	height: 50px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	letter-spacing: 0.05em;
+	text-align: center;
+	text-transform: uppercase;
+	transition: background 0.3s ease-in-out;
+	width: 100px;
+}
+
+.button:hover {
+
+	background: #00c8ff;
+}
+
 /* 网页整体链接样式 */
 a {
 	color: white;
@@ -95,28 +127,36 @@ a {
 	/* margin-left: 40px; */
 	/* margin-top: 500px; */
 	position: fixed;
-	background: url(../img/header-bg.png);
+	background: url(../img/header-bg.jpg);
 }
-.logo{
+
+.logo {
 	margin-left: 100px;
 	margin-right: 40px;
 	margin-top: 5px;
 	margin-bottom: 10px;
 }
 
-.sidebar span{
+.sidebar span {
 	margin-left: 50px;
 	line-height: 75px;
 	font-size: 16px;
 }
-.sidebar_float_class{
+
+.sidebar_float_class {
 	margin-right: 30px;
 }
-.submit{
-	margin-right: 30px;
+
+.submit {
+	margin-left: 15px;
+	width: 90%;
+	height: 35px;
+}
+.select{
+	margin-right: 15px;
 	width: 50px;
 }
-.sidebar_float{
+.sidebar_float {
 	line-height: 75px;
 	float: right;
 }
@@ -124,30 +164,35 @@ a {
 
 /* 主页登陆 */
 
-.loginimg{
-	background-image: url(../img/imgtest01.jpg);
+.loginimg {
+	background-image: url(../img/header-bg.jpg);
 	height: 650px;
 }
-.bg	{
+
+.bg {
 	height: 700px;
 	background-image: url(../img/header-bg.jpg);
 }
-.everyone{
+
+.everyone {
 	width: 100%;
 	height: 620px;
 }
-.xuexi{
+
+.xuexi {
 	padding-top: 300px;
 	padding-left: 100px;
 	color: white;
 }
-.xuexi04{
+
+.xuexi04 {
 	padding-left: 100px;
 	padding-left: 300px;
-    margin-top: 40px;
+	margin-top: 40px;
 }
-.login{
-/* 	width: 300px;
+
+.login {
+	/* 	width: 300px;
 	height: 300px; */
 	/* float: right; */
 	padding-left: 900px;
@@ -156,19 +201,22 @@ a {
 	margin-right: 245px;
 	margin-top: -200px;
 	/* background: #FFFFFF; */
-/* 	background: rgb(35,33,38); */
+	/* 	background: rgb(35,33,38); */
 	color: white;
 }
-.zi{
+
+.zi {
 	padding-top: 56px;
 }
-.button{
+
+.button {
 	background-color: #00c1de;
-    border-color: #00c1de;
-    font-size: 14px;
+	border-color: #00c1de;
+	font-size: 14px;
 	width: 238px;
 	height: 38px;
 }
+
 /* 右上角链接 */
 
 .link {
@@ -177,19 +225,31 @@ a {
 	margin-right: 40px;
 	margin-top: 3rem;
 }
+
 /* 贴吧正文 */
-.wtext{
+.wtext {
 	width: 70%;
 	margin-left: 15%;
 	margin-right: 15%;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	border: 1px solid #d1d5da;
+	box-shadow: inset 0 1px 2px rgba(27, 31, 35, .075);
+	border-radius: 5px;
+	min-height: 20px;
+	padding: 10px;
+	
 }
-.creatInformation{
+
+.creatInformation {
 	font-size: 14px;
 	margin-right: 20px;
 }
-.seeMore{
+
+.seeMore {
 	float: right;
 }
+
 /* 标题 */
 .headline {
 	font-size: 50px;
@@ -228,38 +288,44 @@ a {
 		color:yellow;
 	} 
 }*/
-.head{
+.head {
 	font-size: 60px;
 }
-.bright{
+
+.bright {
 	padding-top: 100px;
 	margin: 60px;
 }
+
 /* 动画 */
 
 
 /* 介绍说明 */
-.text{
+.text {
 	padding-left: 25%;
 	padding-right: 25%;
 }
-.textimg{
 
-		padding: 50px;
+.textimg {
+
+	padding: 50px;
 }
-.introduce{
+
+.introduce {
 	font-size: 50px;
 	color: #666;
 	padding: 60px;
 
 }
-.security{
+
+.security {
 	padding-left: 20%;
 	padding-right: 20%;
 	padding-bottom: 50px;
 	background-color: #f1f1f1;
 }
-.foot{
+
+.foot {
 	height: 90px;
 	background-color: #333;
 	color: #FFFFFF;

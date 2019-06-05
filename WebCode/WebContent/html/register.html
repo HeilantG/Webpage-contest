@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- 这是独立注册页面 -->
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -23,18 +24,18 @@
 			/* 总div */
 			#div_body {
 				width: 980px;
-				height: 1000px;
 				padding-top: 32px;
 				background: ;
 				margin-left: auto;
 				margin-right: auto;
 			}
-
+			input::-webkit-inner-spin-button {
+			  -webkit-appearance: none;
+			}
 			/* 标题 */
 			.font_left {
-				margin-left: 20px;
+				margin-left: 40px;
 			}
-
 			.font_style {
 				font-size: 40px;
 				margin-bottom: -15px;
@@ -75,15 +76,16 @@
 			/* 提示  小建议  */
 			/* 这是个底层 做一个看起来浮动起来的 有阴影的那种 */
 			#div_tip {
-				width: 324.656px;
+				width: 40%;
 				height: 370px;
-				padding-right: 30px;
+				padding: 10px;
 				background: ghostwhite;
 				float: right;
 				text-align: left;
 			}
 
 			#div_tip>ul>li {
+				
 				margin-top: 10px;
 				padding-top: 15px;
 				padding-bottom: 15px;
@@ -101,98 +103,90 @@
 
 			.submit {
 				width: 22%;
+				height: 30px;
+			}
+			select{
+				box-shadow: inset 0 1px 2px rgba(27, 31, 35, .075);
+				font-size: 16px;
+				line-height: 20px;
+				min-height: 20px;
+				padding: 6px 8px;
+				background-color: rgb(232, 240, 254) !important;
+				width: 22%;
+				color: rgb(27, 31, 35) !important;
 			}
 		</style>
 	</head>
-	<body>
-		<div id="div_body">
+	<body style="height:100px" class="">
+		<div id="div_body" class="">
 			<!-- 标题 -->
 			<div class="header_title">
-				<h1 class="font_left font_style">This is a registration page</h1>
-				<p class="font_left">You are very good.</p>
+				<h1 class="font_left font_style">欢迎注册</h1>
+				<p class="font_left">最棒的校园交友,交易平台.</p>
 			</div>
 			<!-- 注册框 -->
 			<form action="#" method="post">
 				<div id="add_stuNo_pwd">
-					<h2 id="title_h2" class="font_left">Create your personal account</h2>
+					<h2 id="title_h2" class="font_left">请填写你的用户信息</h2>
 					<ul>
 						<!-- 注册学号 -->
-						<li>Your student id:</li>
-						<li><input type="text" name="" class="input" /></li>
+						<li><input type="number" name="stuNumber" class="input" placeholder="学号"/></li>
 					</ul>
 					<ul>
 						<!-- 提示  小建议 开始-->
 						<div id="div_tip">
-							<ul>
-								<li>你的学号必须是真实的！</li>
-							</ul>
-							<ul>
-								<li>你的网名可能会被重复</li>
-							</ul>
-							<ul>
-								<li>你的姓名必须是真实的</li>
-							</ul>
-							<ul>
-								<li>不然在闲置交易中可能会送错</li>
-							</ul>
-							<ul>
-								<li>你的宿舍号必须是真实的</li>
-							</ul>
-							<ul>
-								<li>要牢记你的密码</li>
-							</ul>
+							<h1 align="center">注册须知</h1>
+							<h4>&emsp;&emsp;当您点击注册时就表示您同意了<a href="">最终用户许可协议</a>,该协议最终解释权归我所有.</h4>
+							<h4>&emsp;&emsp;我也不知道这里还要放什么.</h4>
+							<h4>&emsp;&emsp;啦啦啦.</h4>
+							<h4>&emsp;&emsp;嘿嘿嘿.</h4>
 						</div>
 						<!-- 提示  小建议 结束-->
 						<!-- 注册用户名 -->
-						<li>Your username:</li>
 						<li>
-							<input type="text" name="" class="input" />
+							<input type="text" name="stuName" class="input" placeholder="用户名"/>
 							<p class="li_p">tip:This is your screen name</p>
 						</li>
 					</ul>
 					<ul>
 						<!-- 注册密码 -->
-						<li>Your password:</li>
-						<li><input type="password" value="" name="" class="input" /></li>
+						<li><input type="password" name="password" class="input" placeholder="密码"/></li>
 					</ul>
 					<ul>
 						<!-- 注册真实姓名 -->
-						<li>Your real name:</li>
-						<li><input type="text" name="" class="input" /></li>
+						<li><input type="text" name="realName" class="input" placeholder="真实姓名"/></li>
 					</ul>
 					<ul>
 						<!-- 注册性别 -->
-						<li>Your sex:
+						<li>
 							<!-- <input type="radio" name="sex" value="0" class="input" />男
 
 							<input type="radio" name="sex" value="1" class="input" />女 -->
-							<select id="sex">
+							<select id="sex" name="sex">
+								<option value="null">性别
 								<option value="0">男
 								<option value="1">女
-								<option value="null">其他
 							</select>
 						</li>
 					</ul>
 					<ul>
 						<!-- 注册电话 -->
-						<li>Your tel:</li>
-						<li><input type="text" name="" class="input" /></li>
+						<li><input type="text" name="tel" class="input"  placeholder="联系电话"/></li>
 					</ul>
 					<ul>
 						<!-- 注册宿舍号 -->
-						<li>Your dorm:</li>
-						<li><input type="text" name="" class="input" /></li>
+						<li><input type="text" name="dormitory" class="input" placeholder="宿舍号"/></li>
 					</ul>
 					<ul>
 						<li>
-							<input type="submit" name="" value="create" class="submit btn-primary" />
+							<input type="submit" name="" value="注册" class="submit btn-primary" />
 							<!-- <input type="reset" name="" value="reset" class="reset btn-primary"/> -->
 						</li>
 					</ul>
 				</div>
 			</form>
 
-
 		</div>
+		<script src="../js/coooooooool.js"></script>
 	</body>
 </html>

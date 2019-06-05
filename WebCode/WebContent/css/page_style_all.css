@@ -39,15 +39,12 @@ hr {
 .sidebar{
 	color: white;
 	font-size: 20px;
-	float: left;
-	margin-left: 40px;
-	margin-top: 5px;
 	position: fixed;
 }
 
 /* 主页标题栏 */
 .header_index{
-	background-image: url(../img/header-bg.png);
+	background-image: url(/img/header-bg.png);
 	height: 100px;
 }
 /* 右上角链接 */

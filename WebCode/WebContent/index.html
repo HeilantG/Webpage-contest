@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- 这是主页兼贴吧页面 -->
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -29,13 +30,14 @@
 			</span>
 			<span class="sidebar_float">
 				<form action="" method="" class="sidebar_float_class">
-					<span><input placeholder="全站搜索" class="" /></span>
-					<input type="submit" name="" id="" class="btn-primary submit" value="搜索" />
+					<span><input placeholder="全站搜索" class="selectall" /></span>
+					<input type="submit" name="" id="" class="btn-primary select" value="搜索" />
 					<a href="html/login.html" class="sidebar_float_class">登陆</a>
-					<a href="html/add.html" class="sidebar_float_class">注册</a>
+					<a href="html/register.html" class="sidebar_float_class">注册</a>
 				</form>
 			</span>
 		</div>
+		<!-- <c:if> -->
 		<!-- 登陆窗口 -->
 		<div id="" class="loginimg">
 			<header id="gtco-header">
@@ -51,20 +53,26 @@
 									<form action="#">
 										<div class="row form-group">
 											<div class="col-md-12">
-												<br>
-												<input placeholder="学号" type="text" class="form-control" id="username">
+												<div class="input_text">
+													学号
+												</div>
+												<input placeholder="学号" type="number" name="stuNumber" class="form-control" id="username">
 											</div>
 										</div>
 										<div class="row form-group">
 											<div class="col-md-12">
-												<br>
-												<input placeholder="真实姓名" type="password" class="form-control" id="password">
+												<div class="input_text">
+													真实姓名
+												</div>
+												<input placeholder="真实姓名" type="text" name="realName" class="form-control" id="password">
 											</div>
 										</div>
 										<div class="row form-group">
 											<div class="col-md-12">
-												<br>
-												<input placeholder="密码" type="password" class="form-control" id="password2">
+												<div class="input_text">
+													密码
+												</div>
+												<input placeholder="密码" type="password" name="password" class="form-control" id="password2">
 											</div>
 										</div>
 
@@ -81,21 +89,25 @@
 									<form action="#">
 										<div class="row form-group">
 											<div class="col-md-12">
-												<br>
-												<input placeholder="学号" type="text" class="form-control" id="username">
+												<div class="input_text">
+													学号
+												</div>
+												<input placeholder="学号" type="number" name="stuNumber" class="form-control" id="username">
 											</div>
 										</div>
 										<div class="row form-group">
 											<div class="col-md-12">
-												<br>
-												<input placeholder="密码" type="password" class="form-control" id="password">
+												<div class="input_text">
+													密码
+												</div>
+												<input placeholder="密码" type="password" name="password" class="form-control" id="password">
 											</div>
 										</div>
 
 										<div class="row form-group">
 											<div class="col-md-12">
 												<br>
-												<input type="submit" class="btn btn-primary" value="登陆">
+												<input type="submit" class="submit btn-primary" value="登陆">
 											</div>
 										</div>
 									</form>
@@ -107,31 +119,36 @@
 			</header>
 
 		</div>
+		
 		<!-- 论坛正文 -->
 		<div class="wtext">
-			<span id="" class="creatInformation">
-				帖子ID:20184399
-			</span>
-			<span id="" class="creatInformation">
-				滑稽的一天
-			</span>
-			<span id="" class="creatInformation">
-				管理猿
-			</span>
-			<span id="" class="creatInformation">
-				创建日期
-			</span>
-			<span id="" class="seeMore">
-				<a href="">查看详情</a>
-			</span>
-		</div>
-		<br>
-		<div class="wtext">
-			滑稽是百度贴吧著名的泡泡表情，旧版名/QQ名/哔哩哔哩动画表情名为“斜眼笑”。圆嘟嘟的脸萌萌哒，弧度上扬的嘴角傲而不娇，微微泛红的脸颊让人感到无限温暖，双眼右视充满欢乐使人浮想联翩，轻挑秀眉深藏功与名。其功用甚至高到可以概括各种心情的地步，广受用户喜爱。现在，滑稽表情已经有了同人动画片以及不计其数的斗图表情。
+
+
+			<div class="">
+				<span id="" class="creatInformation">
+					帖子ID:20184399
+				</span>
+				<span id="" class="creatInformation">
+					滑稽的一天
+				</span>
+				<span id="" class="creatInformation">
+					管理猿
+				</span>
+				<span id="" class="creatInformation">
+					创建日期
+				</span>
+				<span id="" class="seeMore">
+					<a href="">查看详情</a>
+				</span>
+			</div>
+			<hr />
+			<div class="">
+				滑稽是百度贴吧著名的泡泡表情，旧版名/QQ名/哔哩哔哩动画表情名为“斜眼笑”。圆嘟嘟的脸萌萌哒，弧度上扬的嘴角傲而不娇，微微泛红的脸颊让人感到无限温暖，双眼右视充满欢乐使人浮想联翩，轻挑秀眉深藏功与名。其功用甚至高到可以概括各种心情的地步，广受用户喜爱。现在，滑稽表情已经有了同人动画片以及不计其数的斗图表情。
+			</div>
 		</div>
 		<!-- 页脚 -->
 		<div class="foot" align="center">
-				<div>凌云队参赛作品</div>
+			<div>凌云队参赛作品</div>
 		</div>
 		<!-- jQuery -->
 		<script src="js/jquery.min.js"></script>

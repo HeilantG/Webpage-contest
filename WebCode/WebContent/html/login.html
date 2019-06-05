@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- 这是独立登陆页面 -->
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -19,11 +20,9 @@
 			}
 
 			.logo {
-				width: 10%;
+				margin-top: 100px;
+				width: 5%;
 			}
-
-			#div_body {}
-
 			h1 {
 				text-align: center;
 				font-weight: 300;
@@ -34,6 +33,13 @@
 				width: 300px;
 				height: 237.93px;
 				background: whitesmoke;
+				border: 0.0625rem;
+				/* 弧形边框 */
+				/* border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px; */
+				border-radius: 5px;
 			}
 
 			.input {
@@ -44,6 +50,8 @@
 				min-height: 20px;
 				padding: 6px 8px;
 				background-color: rgb(232, 240, 254) !important;
+				
+				border-radius: 5px;
 			}
 
 			li {
@@ -55,14 +63,17 @@
 				margin-top: 4px;
 				background: #E8F0FE;
 			}
-			.btn{
+
+			.btn {
 				display: block;
 				text-align: center;
 				width: 82%;
 			}
 		</style>
 	</head>
-	<body>
+	<body style="height:100px">
+
+		
 		<div class="div1" align="center">
 			<!-- 总div -->
 			<!-- 顶 -->
@@ -83,9 +94,9 @@
 					<div class="body_login">
 						<ul class="padding_top">
 							<li>请输入你的学号：</li>
-							<li><input type="text" name="" class="input" /></li>
+							<li><input type="text" name="stuNumber" class="input" /></li>
 							<li class="padding_top">请输入你的密码：</li>
-							<li><input type="password" name="" class="input" /></li>
+							<li><input type="password" name="password" class="input" /></li>
 							<br>
 							<input type="submit" name="" id="" value="登陆" class="btn btn-primary" />
 						</ul>
@@ -95,6 +106,6 @@
 
 			</div>
 		</div>
-
-	</body>
+<script src="../js/coooooooool.js"></script>
+</body>
 </html>
