@@ -1,0 +1,92 @@
+/* sign up 按钮动画 */
+#gtco-header .form-wrap .tab-menu li.active a {
+  background: #fff;
+  color: #f54c53;
+}
+a {
+  color: deepskyblue;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+a:hover, a:active, a:focus {
+  color: #f54c53;
+  outline: none;
+  text-decoration: none;
+}
+
+
+.gtco-nav #gtco-logo em {
+  color: #f54c53;
+}
+
+
+/* 登录框大小位置 */
+#gtco-header {
+	margin-right: 250px;
+	margin-top: 250px;
+	float: right;
+  background: skyblue;
+	width: 25%;
+}
+
+#gtco-header .form-wrap .tab-menu {
+  padding: 0 !important;
+  margin: 0 0 0px 0 !important;
+  width: 89.75%;
+  /* float: left; */
+  z-index: 12;
+  position: relative;
+}
+/* sign up 按钮 */
+#gtco-header .form-wrap .tab-menu li {
+  list-style: none;
+  display: inline;
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+#gtco-header .form-wrap .tab-menu li a {
+  padding: 10px 20px 20px 20px;
+  float: left;
+	/* sign up 宽度 */
+  width: 100%;
+  display: block;
+  background: rgba(255, 255, 255, 0.5);
+  color: #1a1a1a;
+}
+/* 登陆矿体布局 */
+#gtco-header .form-wrap .tab-content {
+  z-index: 10;
+  position: relative;
+  clear: both;
+  background: #fff;
+  padding: 30px;
+	height: 220px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+#gtco-header .form-wrap .tab-content .tab-content-inner {
+  display: none;
+}
+#gtco-header .form-wrap .tab-content .tab-content-inner.active {
+  display: block;
+}
+.btn-primary {
+  background: #f54c53;
+  color: #fff;
+  border: 0px solid #f54c53 !important;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background: #f6646a !important;
+  border-color: #f6646a !important;
+}
+.btn-primary.btn-outline {
+  background: transparent;
+  color: #f54c53;
+  border: 0px solid #f54c53;
+}
+.btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
+  background: #f54c53;
+  color: #fff;
+}

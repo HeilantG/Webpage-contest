@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册页面</title>
+		<meta charset="utf-8">
+		<title>登陆</title>
+		<link rel="stylesheet" type="text/css" href="../css/page_style_all.css" />
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="../css/login/animate.css">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="../../css/login/icomoon.css">
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="../css/login/style.css">
+
+
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+
+			/* 总div */
+			#div_body {
+				width: 980px;
+				height: 1000px;
+				padding-top: 32px;
+				background: ;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			/* 标题 */
+			.font_left {
+				margin-left: 20px;
+			}
+
+			.font_style {
+				font-size: 40px;
+				margin-bottom: -15px;
+			}
+
+			.header_title>p {
+				margin-left: 25px;
+			}
+
+			#title_h2 {
+				margin-left: 25px;
+				font-family: "仿宋";
+			}
+
+			/* ul列中所有的li */
+			ul>li {
+				list-style: none;
+				padding-top: 5px;
+			}
+
+			/* li里的单个p标签 */
+			.li_p {
+				margin-top: auto;
+				font-size: 10px;
+			}
+
+			/* 鼠标点击input变色 */
+			.input {
+				border: 1px solid #d1d5da;
+				box-shadow: inset 0 1px 2px rgba(27, 31, 35, .075);
+				font-size: 16px;
+				line-height: 20px;
+				min-height: 20px;
+				padding: 6px 8px;
+				background-color: rgb(232, 240, 254) !important;
+			}
+
+			/* 提示  小建议  */
+			/* 这是个底层 做一个看起来浮动起来的 有阴影的那种 */
+			#div_tip {
+				width: 324.656px;
+				height: 370px;
+				padding-right: 30px;
+				background: ghostwhite;
+				float: right;
+				text-align: left;
+			}
+
+			#div_tip>ul>li {
+				margin-top: 10px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				width: 283px;
+				display: block;
+				background: #E8F0FE;
+				font-family: "仿宋";
+
+			}
+
+			/* reset  */
+			.reset {
+				margin-left: 12.5%;
+			}
+
+			.submit {
+				width: 22%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div_body">
+			<!-- 标题 -->
+			<div class="header_title">
+				<h1 class="font_left font_style">This is a registration page</h1>
+				<p class="font_left">You are very good.</p>
+			</div>
+			<!-- 注册框 -->
+			<form action="#" method="post">
+				<div id="add_stuNo_pwd">
+					<h2 id="title_h2" class="font_left">Create your personal account</h2>
+					<ul>
+						<!-- 注册学号 -->
+						<li>Your student id:</li>
+						<li><input type="text" name="" class="input" /></li>
+					</ul>
+					<ul>
+						<!-- 提示  小建议 开始-->
+						<div id="div_tip">
+							<ul>
+								<li>你的学号必须是真实的！</li>
+							</ul>
+							<ul>
+								<li>你的网名可能会被重复</li>
+							</ul>
+							<ul>
+								<li>你的姓名必须是真实的</li>
+							</ul>
+							<ul>
+								<li>不然在闲置交易中可能会送错</li>
+							</ul>
+							<ul>
+								<li>你的宿舍号必须是真实的</li>
+							</ul>
+							<ul>
+								<li>要牢记你的密码</li>
+							</ul>
+						</div>
+						<!-- 提示  小建议 结束-->
+						<!-- 注册用户名 -->
+						<li>Your username:</li>
+						<li>
+							<input type="text" name="" class="input" />
+							<p class="li_p">tip:This is your screen name</p>
+						</li>
+					</ul>
+					<ul>
+						<!-- 注册密码 -->
+						<li>Your password:</li>
+						<li><input type="password" value="" name="" class="input" /></li>
+					</ul>
+					<ul>
+						<!-- 注册真实姓名 -->
+						<li>Your real name:</li>
+						<li><input type="text" name="" class="input" /></li>
+					</ul>
+					<ul>
+						<!-- 注册性别 -->
+						<li>Your sex:
+							<!-- <input type="radio" name="sex" value="0" class="input" />男
+
+							<input type="radio" name="sex" value="1" class="input" />女 -->
+							<select id="sex">
+								<option value="0">男
+								<option value="1">女
+								<option value="null">其他
+							</select>
+						</li>
+					</ul>
+					<ul>
+						<!-- 注册电话 -->
+						<li>Your tel:</li>
+						<li><input type="text" name="" class="input" /></li>
+					</ul>
+					<ul>
+						<!-- 注册宿舍号 -->
+						<li>Your dorm:</li>
+						<li><input type="text" name="" class="input" /></li>
+					</ul>
+					<ul>
+						<li>
+							<input type="submit" name="" value="create" class="submit btn-primary" />
+							<!-- <input type="reset" name="" value="reset" class="reset btn-primary"/> -->
+						</li>
+					</ul>
+				</div>
+			</form>
+
+
+		</div>
+	</body>
+</html>

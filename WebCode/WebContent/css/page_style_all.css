@@ -1,0 +1,102 @@
+/* 规定字体与取消四周边框 */
+body{
+				font-family: "microsoft yahei";
+				margin: 0px;
+				padding: 0px;
+				line-height: 1.7;
+				background: #ececec;
+			}
+/* 网页整体链接样式 */
+a{
+	color: white;
+	transition: color 0.5s;
+}
+a:hover{
+	color: deepskyblue;
+}
+@keyframes hover{
+	from{color: white;}
+	to{color: deepskyblue;}
+}
+a:active{color: white;}
+a{
+	text-decoration: none;
+}
+hr {
+	margin-top: 2rem;
+	border: 2px dashed #666;
+}
+
+/*清理浮动  */
+.clear:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+/* 左上角浮动图标 */
+
+
+.sidebar{
+	color: white;
+	font-size: 20px;
+	float: left;
+	margin-left: 40px;
+	margin-top: 5px;
+	position: fixed;
+}
+
+/* 主页标题栏 */
+.header_index{
+	background-image: url(../img/header-bg.png);
+	height: 100px;
+}
+/* 右上角链接 */
+.link{
+	float: right;
+	font-size: 15px;
+	margin-right: 40px;
+	margin-top: 50px;
+}
+/* 正文部分 */
+.text{
+	width: 60%;
+    margin: auto;
+	padding-top: 5rem;
+
+}
+.portrait{
+	height: 250px;
+}
+.name{
+	font-size: 26px;
+	line-height: 30px;
+}
+.usename{
+	font-weight: 100;
+}
+.bio{
+	font-weight: 100;
+	padding-top: 20px;
+}
+.page{
+	float: left;
+	margin-top: -70px;
+	background: #fff;
+}
+.detailed{
+	font-size: 30px;
+	padding-right: 50px;
+}
+.grateful{
+	color: black !important;
+	border: #777777 2px solid;
+}
+.text div div{
+	padding-left: 5px;
+}
+.size{
+	border-top: #777777 2px solid;
+	font-size: 25px;
+	padding-bottom: 30px;
+
+}

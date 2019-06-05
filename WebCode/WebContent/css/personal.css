@@ -1,0 +1,75 @@
+/* 规定字体与取消四周边框 */
+body {
+	font-family: "microsoft yahei";
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+}
+
+/* 网页整体链接样式 */
+a {
+	color: white;
+	transition: color 0.5s;
+}
+/* 左上角浮动图标 */
+.sidebar {
+	color: white;
+	font-size: 20px;
+	float: left;
+	margin-left: 40px;
+	margin-top: 5px;
+	position: fixed;
+}
+
+
+a:hover {
+	color: deepskyblue;
+}
+
+@keyframes hover {
+	from {
+		color: white;
+	}
+
+	to {
+		color: deepskyblue;
+	}
+}
+
+a:active {
+	color: white;
+}
+
+a {
+	text-decoration: none;
+}
+.header{
+    height: 100px;
+	background-image: url(../img/bgimg.png);
+}
+
+.link {
+    float: right;
+    font-size: 15px;
+    margin-right: 40px;
+    margin-top: 2rem;
+}
+.text{
+    background: rgb(230, 230, 230);
+    height: 600px;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 26px;
+}
+.text div{
+    padding-top: 80px;
+}
+footer{
+
+        height: 90px;
+        background-color: #333;
+        color: #FFFFFF;
+        font-size: 60px;
+        margin: 10px;
+
+}
