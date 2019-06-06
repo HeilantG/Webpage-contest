@@ -62,13 +62,10 @@
 		</style>
 	</head>
 	<body style="height:100px">
-		<!-- <div id="" class="img">
-			
-		</div> -->
 		<script src="../js/coooooooool.js"></script>
 		<!-- 菜单栏 -->
 		<div class="sidebar">
-			<a href="#"><img class="logo" src="../img/logo.png" width="60" align="absbottom" /></a>
+			<a href="<%=request.getContextPath()%>/index.jsp"><img class="logo" src="<%=request.getContextPath()%>/img/logo.png" width="60" align="absbottom" /></a>
 			<span class="projectName">项目名</span>
 			<span id="">
 				<a href="#">
@@ -92,8 +89,6 @@
 			<form action="" method="post">
 				<ul>
 					<li><span>标题&emsp;</span><input type="text" class="input" name="title" /></li>
-					<br>
-					<br>
 					<li><span>正文&emsp;</span><textarea name="content" required="required" placeholder="在这里写你想说的话" rows="10" cols="67" /></textarea></li>
 				</ul>
 				<input type="submit" value="发帖" class="sub" />
