@@ -93,7 +93,7 @@
 					<h1>欢迎登陆项目名</h1>
 				</div>
 				<!-- 字结束 -->
-				<form action="" method="">
+				<form action="${pageContext.request.contextPath }/user?type=login" method="post">
 					<div class="body_login">
 						<ul class="padding_top">
 							<li>请输入你的学号：</li>

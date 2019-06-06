@@ -19,7 +19,7 @@ public class DBUtil {
 	public static PreparedStatement getpst(String sql) {
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			conn = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=contest", "sa", "123456");
+			conn = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=webContest", "sa", "123456");
 			pst = conn.prepareStatement(sql);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();

@@ -5,5 +5,5 @@ package com.contest.dao;
  *
  */
 public class DealDao {
-
+	
 }

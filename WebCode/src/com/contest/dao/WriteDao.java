@@ -26,7 +26,6 @@ public class WriteDao {
 			pst.setString(3, write.getContent());
 			num = pst.executeUpdate();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
 			DBUtil.close(null);

@@ -128,7 +128,7 @@
 				<p class="font_left">最棒的校园交友,交易平台.</p>
 			</div>
 			<!-- 注册框 -->
-			<form action="#" method="post">
+			<form action="${pageContext.request.contextPath }/user?type=add2" method="post">
 				<div id="add_stuNo_pwd">
 					<h2 id="title_h2" class="font_left">请填写你的用户信息</h2>
 					<ul>
@@ -166,11 +166,15 @@
 
 							<input type="radio" name="sex" value="1" class="input" />女 -->
 							<select id="sex" name="sex">
-								<option value="null">性别
+								<option value="2">性别
 								<option value="0">男
 								<option value="1">女
 							</select>
 						</li>
+					</ul>
+					<ul>
+						<!-- 注册班级 -->
+						<li><input type="text" name="classes" class="input" placeholder="班级"/></li>
 					</ul>
 					<ul>
 						<!-- 注册电话 -->

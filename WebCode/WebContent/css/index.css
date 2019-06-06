@@ -124,7 +124,7 @@ a {
 }
 
 a:hover {
-	color: deepskyblue;	
+	color: deepskyblue;
 }
 
 @keyframes hover {
@@ -160,12 +160,14 @@ a {
 	width: 100%;
 	/* margin-left: 40px; */
 	/* margin-top: 500px; */
+	position: fixed;
 	background: url(../img/header-bg.jpg);
 }
 
 .logo {
 	margin-left: 100px;
 	margin-right: 40px;
+	margin-top: 5px;
 	margin-bottom: 10px;
 }
 
@@ -228,7 +230,7 @@ a {
 .login {
 	/* 	width: 300px;
 	height: 300px; */
-	float: right;
+	/* float: right; */
 	padding-left: 900px;
 	line-height: 40px;
 	text-align: left;

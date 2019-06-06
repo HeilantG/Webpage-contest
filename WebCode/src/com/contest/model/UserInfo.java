@@ -41,6 +41,24 @@ public class UserInfo {
 		this.classes = classes;
 		this.dormitory = dormitory;
 	}
+	public UserInfo(int stuNumber, String password) {
+		super();
+		this.stuNumber = stuNumber;
+		this.password = password;
+	}
+	
+	public UserInfo(int uid, int stuNumber, String password, String stuName, String realName, String tel,
+			String classes, String dormitory) {
+		super();
+		this.uid = uid;
+		this.stuNumber = stuNumber;
+		this.password = password;
+		this.stuName = stuName;
+		this.realName = realName;
+		this.tel = tel;
+		this.classes = classes;
+		this.dormitory = dormitory;
+	}
 	public int getUid() {
 		return uid;
 	}

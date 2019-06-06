@@ -26,7 +26,7 @@ a:hover, a:active, a:focus {
 /* 登录框大小位置 */
 #gtco-header {
 	margin-right: 250px;
-	margin-top: 50px;
+	margin-top: 150px;
 	float: right;
   background: skyblue;
 	width: 25%;
@@ -65,7 +65,7 @@ a:hover, a:active, a:focus {
   clear: both;
   background: #fff;
   padding: 30px;
-height: 300px;
+	height: 300px;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
 }

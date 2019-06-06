@@ -17,7 +17,7 @@ public class UserDao {
 	private static ResultSet rs;
 
 //	增加
-	public static int addUser(UserInfo user) {
+	public int addUser(UserInfo user) {
 		String SQL = "insert into userInfo values (?,?,?,?,?,?,?,?)";
 		pst = DBUtil.getpst(SQL);
 		int num = 0;
@@ -62,8 +62,8 @@ public class UserDao {
 		return num;
 	}
 //	查询一个(登陆)
-	public static UserInfo selectOne(UserInfo user) {
-		String SQL = "select * from userInfo where stuNumber = ? and password=?";
+	public UserInfo selectOne(UserInfo user) {
+		String SQL = "select * from userInfo where stuNumber=? and password=?";
 		pst = DBUtil.getpst(SQL);
 		UserInfo u = null;
 		try {
@@ -73,7 +73,7 @@ public class UserDao {
 			while (rs.next()) {
 				u = new  UserInfo(rs.getInt("uid"), rs.getInt("stuNumber"), rs.getString("password"),
 						rs.getString("stuName"), rs.getString("realName"), rs.getInt("sex"), rs.getString("tel"),
-						rs.getString("classes"), rs.getNString("dormitory"));
+						rs.getString("classes"), rs.getString("dormitory"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
