@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!-- 这是发帖页面 -->
 <html>
@@ -68,7 +71,10 @@
 			<a href="#"><img class="logo" src="../img/logo.png" width="60" align="absbottom" /></a>
 			<span class="projectName">项目名</span>
 			<span id="">
-				GitHub
+				<a href="#">
+			
+					GitHub
+				</a>
 			</span>
 			<span id="">
 				PornHub

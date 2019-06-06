@@ -7,6 +7,37 @@ body {
 	background: #ececec;
 }
 
+
+#scroll-1::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+#scroll-1::-webkit-scrollbar-button {
+	background: whitesmoke;
+}
+
+#scroll-1::-webkit-scrollbar-track {
+	background: whitesmoke;
+}
+
+#scroll-1::-webkit-scrollbar-track-piece {
+	background: skyblue;
+}
+
+#scroll-1::-webkit-scrollbar-thumb {
+	background: #5CB85C;
+	border-radius: 4px;
+}
+
+#scroll-1::-webkit-scrollbar-corner {
+	background: #82AFFF;
+}
+
+#scroll-1::-webkit-scrollbar-resizer {
+	background: #FF0BEE;
+}
+
 /* input 框 */
 .form-control {
 	width: 90%;
@@ -20,10 +51,12 @@ body {
 	padding: 10px;
 	margin-left: 10px;
 }
+
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+	-webkit-appearance: none;
 }
-.selectall{
+
+.selectall {
 	border: 1px solid #d1d5da;
 	box-shadow: inset 0 1px 2px rgba(27, 31, 35, .075);
 	font-size: 16px;
@@ -32,6 +65,7 @@ input::-webkit-inner-spin-button {
 	min-height: 20px;
 	margin-left: 10px;
 }
+
 .input_text {
 	font-size: 14px;
 	font-weight: 600 !important;
@@ -152,10 +186,12 @@ a {
 	width: 90%;
 	height: 35px;
 }
-.select{
+
+.select {
 	margin-right: 15px;
 	width: 50px;
 }
+
 .sidebar_float {
 	line-height: 75px;
 	float: right;
@@ -238,7 +274,7 @@ a {
 	border-radius: 5px;
 	min-height: 20px;
 	padding: 10px;
-	
+
 }
 
 .creatInformation {
