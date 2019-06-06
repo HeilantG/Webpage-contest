@@ -28,14 +28,14 @@ go
 create table userInfo
 (
 	uid int primary key identity(1,1),
-	stuNumber varchar(10) not null,
+	stuNumber int not null,
 	password varchar(16) not null,
 	stuName varchar(20) not null,
 	realName varchar(10) not null,
 	sex int  not null,
 	tel varchar(11),
 	classes varchar(50),
-	dormitory varchar(50)
+	dormitory varchar(50) -- 宿舍
 )
 go
 
@@ -45,7 +45,7 @@ create table writeInfo
 	userNumber int REFERENCES userInfo(uid),
 	title varchar(50) not null,
 	creatTime DateTime,
-	content varchar(255)
+	content varchar(255)	
 )
 go
 
