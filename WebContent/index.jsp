@@ -45,7 +45,8 @@
 						class="sidebar_float_class">注册</a>
 				</c:if>
 				<c:if test="${user.stuNumber!=null}">
-					<a href="" class="sidebar_float_class">&emsp;${user.stuName }</a>
+					<a href="${pageContext.request.contextPath }/write?type=find_top2&stuNumber=${user.stuNumber}
+" class="sidebar_float_class">&emsp;${user.stuName }</a>
 					<a href="" class="sidebar_float_class"></a>
 				</c:if>
 			</form>
