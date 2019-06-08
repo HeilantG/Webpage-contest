@@ -59,6 +59,10 @@ public class UserInfo {
 		this.classes = classes;
 		this.dormitory = dormitory;
 	}
+	public UserInfo(String stuName) {
+		super();
+		this.stuName = stuName;
+	}
 	public int getUid() {
 		return uid;
 	}

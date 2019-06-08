@@ -64,23 +64,23 @@
 	<body style="height:100px">
 		<script src="../js/coooooooool.js"></script>
 		<!-- 菜单栏 -->
-		<div class="sidebar">
-			<a href="<%=request.getContextPath()%>/index.jsp"><img class="logo" src="<%=request.getContextPath()%>/img/logo.png" width="60" align="absbottom" /></a>
-			<span class="projectName">项目名</span>
-			<span id="">
-				<a href="#">
-			
-					GitHub
-				</a>
-			</span>
-			<span id="">
-				PornHub
-			</span>
-			<span class="sidebar_float">
+		<div class="sidebar" style="z-index: 10 !important; ">
+			<a href="<%=request.getContextPath()%>/index.jsp"><img class="logo" src="<%=request.getContextPath()%>/img/logo.png	"
+				 width="60" align="absbottom" /></a> <span class="projectName">项目名</span>
+			<span id=""> <a href="jsp/addtext.jsp"> GitHub </a>
+			</span> <span id=""> Welcome </span> <span class="sidebar_float">
 				<form action="" method="" class="sidebar_float_class">
-					<span><input placeholder="全站搜索" class="selectall" /></span>
-					<input type="submit" name="" id="" class="btn-primary select" value="搜索" />
-					<span>大滑稽</span>
+					<span><input placeholder="全站搜索" class="selectall" /></span> <input type="submit" name="" id="" class="btn-primary select"
+					 value="搜索" />
+
+					<c:if test="${user.stuNumber==null}">
+						<a href="<%=request.getContextPath()%>/jsp/login.jsp" class="sidebar_float_class">登陆</a>
+						<a href="<%=request.getContextPath()%>/jsp/register.jsp" class="sidebar_float_class">注册</a>
+					</c:if>
+					<c:if test="${user.stuNumber!=null}">
+						<a href="jsp/Personal_information.jsp" class="sidebar_float_class">&emsp;${user.stuName }</a>
+						<a href="" class="sidebar_float_class"></a>
+					</c:if>
 				</form>
 			</span>
 		</div>

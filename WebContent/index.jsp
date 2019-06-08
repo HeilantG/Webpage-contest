@@ -22,6 +22,11 @@
 	href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
 </head>
 <body id="scroll-1">
+<c:if test="${write==null }">
+	<jsp:forward page="write?type=findAll_top10"></jsp:forward>
+</c:if>
+<c:if test="${write!=null }">
+</c:if>
 	<!-- 导航栏 -->
 	<div class="sidebar" style="z-index: 10 !important;">
 		<a href="<%=request.getContextPath()%>/index.jsp"><img
@@ -128,24 +133,24 @@
 
 		</div>
 	</c:if>
-
-	<!-- 论坛正文 -->
-	<div class="wtext">
-
-
-		<div class="">
-			<span id="" class="creatInformation"> 帖子ID:20184399 </span> <span
-				id="" class="creatInformation"> 滑稽的一天 </span> <span id=""
-				class="creatInformation"> 管理猿 </span> <span id=""
-				class="creatInformation"> 创建日期 </span> <span id="" class="seeMore">
-				<a href="">查看详情</a>
-			</span>
+	<c:forEach items="${write }" var="write" varStatus="i">
+		<!-- 论坛正文 -->
+		<div class="wtext">
+			<div class="">
+				<span id="" class="creatInformation"> 帖子ID:${write.wid }</span> <span
+					id="" class="creatInformation"> ${write.title }</span> <span id=""
+					class="creatInformation"> ${listuser[i.count-1].stuName } </span> <span id=""
+					class="creatInformation"> ${write.creatTime } </span> <span id="" class="seeMore">
+					<a href="">查看详情</a>
+				</span>
+			</div>
+			<hr />
+			<div class="">
+				${write.content }
+			</div>
 		</div>
-		<hr />
-		<div class="">
-			滑稽是百度贴吧著名的泡泡表情，旧版名/QQ名/哔哩哔哩动画表情名为“斜眼笑”。圆嘟嘟的脸萌萌哒，弧度上扬的嘴角傲而不娇，微微泛红的脸颊让人感到无限温暖，双眼右视充满欢乐使人浮想联翩，轻挑秀眉深藏功与名。其功用甚至高到可以概括各种心情的地步，广受用户喜爱。现在，滑稽表情已经有了同人动画片以及不计其数的斗图表情。
-		</div>
-	</div>
+	</c:forEach>
+	
 	<!-- 页脚 -->
 	<div class="foot" align="center">
 		<div>凌云队参赛作品</div>
