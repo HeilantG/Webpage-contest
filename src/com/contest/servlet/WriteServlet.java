@@ -83,9 +83,9 @@ public class WriteServlet extends HttpServlet {
 	 */
 	private void find_top2(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String stuNumber = request.getParameter("stuNumber");
-		List<WriteInfo> list = ws.find_top2Bytime(Integer.parseInt(stuNumber));
+		List<WriteInfo> writelist = ws.find_top2Bytime(Integer.parseInt(stuNumber));
 		HttpSession session = request.getSession();
-		session.setAttribute("listuser", list);
+		session.setAttribute("writelist", writelist);
 		request.getRequestDispatcher("jsp/Personal_information.jsp").forward(request, response);
 		
 	}

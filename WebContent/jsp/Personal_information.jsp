@@ -65,12 +65,12 @@
 					<div class="textinfo">我的贴子</div>
 					<hr width="90%">
 					<ol>
-						<c:forEach items="listuser" var="u">
+						<c:forEach items="${writelist}" var="w">
 							<li class="div1">
 								<div style="float: right;">
 									<a>帖子链接</a>
 								</div>
-								<div class="wname">${u.title}</div>
+								<div class="wname">${w.title}</div>
 								<div class="wcontent">帖子内容</div>
 								<div class="wdate">发帖时间</div>
 							</li>
