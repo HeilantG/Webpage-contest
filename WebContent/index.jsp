@@ -28,7 +28,7 @@
 			class="logo" src="<%=request.getContextPath()%>/img/logo.png	"
 			width="60" align="absbottom" /></a> <span class="projectName">项目名</span>
 		<span id=""> <a href="jsp/addtext.jsp"> GitHub </a>
-		</span> <span id=""> PornHub </span> <span class="sidebar_float">
+		</span> <span id=""> Welcome </span> <span class="sidebar_float">
 			<form action="" method="" class="sidebar_float_class">
 				<span><input placeholder="全站搜索" class="selectall" /></span> <input
 					type="submit" name="" id="" class="btn-primary select" value="搜索" />
