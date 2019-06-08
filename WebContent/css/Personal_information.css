@@ -43,14 +43,16 @@ ol{
 .div1{
 	margin-left:5%;
 	float: left; width: 43%;
-	border: 1px solid black!important;
+	border-top: 1px solid black!important;
+	border-bottom: 1px solid black!important;
 	margin-top: 50px;
 	margin-bottom: 10px;
 }
 .div2{
 	margin-left:5%;
 	float: left; width: 43%;
-	border: 1px solid black!important;
+	border-top: 1px solid black!important;
+	border-bottom: 1px solid black!important;
 	margin-top: 70px;
 }
 #footer{

@@ -86,7 +86,7 @@ public class WriteServlet extends HttpServlet {
 		List<WriteInfo> list = ws.find_top2Bytime(Integer.parseInt(stuNumber));
 		HttpSession session = request.getSession();
 		session.setAttribute("listuser", list);
-		request.getRequestDispatcher("").forward(request, response);
+		request.getRequestDispatcher("jsp/Personal_information.jsp").forward(request, response);
 		
 	}
 	/**

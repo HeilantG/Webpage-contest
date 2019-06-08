@@ -33,7 +33,6 @@
 				border: 5px solid #d1d5da;
 				box-shadow: inset 0 1px 2px rgba(27, 31, 35, .075);
 				border-radius: 5px;
-				min-height: 20px;
 				padding: 10px;
 			}
 
@@ -63,32 +62,39 @@
 	</head>
 	<body style="height:100px">
 		<script src="../js/coooooooool.js"></script>
-		<!-- 菜单栏 -->
-		<div class="sidebar" style="z-index: 10 !important; ">
-			<a href="<%=request.getContextPath()%>/index.jsp"><img class="logo" src="<%=request.getContextPath()%>/img/logo.png	"
-				 width="60" align="absbottom" /></a> <span class="projectName">项目名</span>
-			<span id=""> <a href="jsp/addtext.jsp"> GitHub </a>
-			</span> <span id=""> Welcome </span> <span class="sidebar_float">
-				<form action="" method="" class="sidebar_float_class">
-					<span><input placeholder="全站搜索" class="selectall" /></span> <input type="submit" name="" id="" class="btn-primary select"
-					 value="搜索" />
+	<!-- 导航栏 -->
+	<div class="sidebar" style="z-index: 10 !important;">
+		<a href="<%=request.getContextPath()%>/index.jsp"><img
+			class="logo" src="<%=request.getContextPath()%>/img/logo.png	"
+			width="60" align="absbottom" /></a> <span class="projectName">项目名</span>
+		<span id=""> <a href="#"> GitHub </a>
+		</span> <span id=""> Welcome </span> <span class="sidebar_float">
+			<form action="" method="" class="sidebar_float_class" style="height: 60px;">
+				<span><input placeholder="全站搜索" class="selectall" /></span> <input
+					type="submit" name="" id="" class="btn-primary select" value="搜索" />
 
-					<c:if test="${user.stuNumber==null}">
-						<a href="<%=request.getContextPath()%>/jsp/login.jsp" class="sidebar_float_class">登陆</a>
-						<a href="<%=request.getContextPath()%>/jsp/register.jsp" class="sidebar_float_class">注册</a>
-					</c:if>
-					<c:if test="${user.stuNumber!=null}">
-						<a href="jsp/Personal_information.jsp" class="sidebar_float_class">&emsp;${user.stuName }</a>
-						<a href="" class="sidebar_float_class"></a>
-					</c:if>
-				</form>
-			</span>
-		</div>
+				<c:if test="${user.stuNumber==null}">
+					<a href="<%=request.getContextPath()%>/jsp/login.jsp"
+						class="sidebar_float_class">登陆</a>
+					<a href="<%=request.getContextPath()%>/jsp/register.jsp"
+						class="sidebar_float_class">注册</a>
+				</c:if>
+				<c:if test="${user.stuNumber!=null}">
+					<a
+						href="${pageContext.request.contextPath }/write?type=find_top2&stuNumber=${user.stuNumber}
+"
+						class="sidebar_float_class">&emsp;${user.stuName }</a>
+					<a href="" class="sidebar_float_class"></a>
+				</c:if>
+			</form>
+		</span>
+	</div>
 		<!-- 添加 -->
-		<div class="addtext" align="center">
-			<form action="" method="post">
+		<div class="addtext" align="center" style="background-color: #ececec">
+			<form action="" method="post" >
 				<ul>
-					<li><span>标题&emsp;</span><input type="text" class="input" name="title" /></li>
+					<li><span>标题&emsp;</span><input type="text" class="input" name="title" style="height: 50px;font-size: 25px"/></li>
+				<br>
 					<li><span>正文&emsp;</span><textarea name="content" required="required" placeholder="在这里写你想说的话" rows="10" cols="67" /></textarea></li>
 				</ul>
 				<input type="submit" value="发帖" class="sub" />

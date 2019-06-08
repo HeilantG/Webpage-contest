@@ -22,11 +22,13 @@
 	href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
 </head>
 <body id="scroll-1">
-<c:if test="${write==null }">
-	<jsp:forward page="write?type=findAll_top10"></jsp:forward>
-</c:if>
-<c:if test="${write!=null }">
-</c:if>
+<!-- 如果用户未登陆  -->
+	<c:if test="${write==null }">
+		<jsp:forward page="write?type=findAll_top10"></jsp:forward>
+	</c:if>
+	<c:if test="${write!=null }">
+	</c:if>
+	
 	<!-- 导航栏 -->
 	<div class="sidebar" style="z-index: 10 !important;">
 		<a href="<%=request.getContextPath()%>/index.jsp"><img
@@ -34,7 +36,7 @@
 			width="60" align="absbottom" /></a> <span class="projectName">项目名</span>
 		<span id=""> <a href="jsp/addtext.jsp"> GitHub </a>
 		</span> <span id=""> Welcome </span> <span class="sidebar_float">
-			<form action="" method="" class="sidebar_float_class">
+			<form action="" method="" class="sidebar_float_class" style="height: 60px;">
 				<span><input placeholder="全站搜索" class="selectall" /></span> <input
 					type="submit" name="" id="" class="btn-primary select" value="搜索" />
 
@@ -45,15 +47,18 @@
 						class="sidebar_float_class">注册</a>
 				</c:if>
 				<c:if test="${user.stuNumber!=null}">
-					<a href="${pageContext.request.contextPath }/write?type=find_top2&stuNumber=${user.stuNumber}
-" class="sidebar_float_class">&emsp;${user.stuName }</a>
+					<a
+						href="${pageContext.request.contextPath }/write?type=find_top2&stuNumber=${user.stuNumber}
+"
+						class="sidebar_float_class">&emsp;${user.stuName }</a>
 					<a href="" class="sidebar_float_class"></a>
 				</c:if>
 			</form>
 		</span>
 	</div>
+
+	<!-- 登陆窗口 -->
 	<c:if test="${user.stuNumber==null}">
-		<!-- 登陆窗口 -->
 		<div id="" class="loginimg">
 			<header id="gtco-header">
 				<div class=" animate-box" data-animate-effect="fadeInRight">
@@ -134,24 +139,23 @@
 
 		</div>
 	</c:if>
-	<c:forEach items="${write }" var="write" varStatus="i">
-		<!-- 论坛正文 -->
-		<div class="wtext">
-			<div class="">
-				<span id="" class="creatInformation"> 帖子ID:${write.wid }</span> <span
-					id="" class="creatInformation"> ${write.title }</span> <span id=""
-					class="creatInformation"> ${listuser[i.count-1].stuName } </span> <span id=""
-					class="creatInformation"> ${write.creatTime } </span> <span id="" class="seeMore">
-					<a href="">查看详情</a>
-				</span>
+	<!-- 论坛正文 -->
+	<div style="padding-top: 70px">
+		<c:forEach items="${write }" var="write" varStatus="i">
+			<div class="wtext">
+				<div class="">
+					<span id="" class="creatInformation"> 帖子ID:${write.wid }</span> <span
+						id="" class="creatInformation"> ${write.title }</span> <span id=""
+						class="creatInformation"> ${listuser[i.count-1].stuName } </span>
+					<span id="" class="creatInformation"> ${write.creatTime } </span> <span
+						id="" class="seeMore"> <a href="">查看详情</a>
+					</span>
+				</div>
+				<hr />
+				<div class="">${write.content }</div>
 			</div>
-			<hr />
-			<div class="">
-				${write.content }
-			</div>
-		</div>
-	</c:forEach>
-	
+		</c:forEach>
+	</div>
 	<!-- 页脚 -->
 	<div class="foot" align="center">
 		<div>凌云队参赛作品</div>

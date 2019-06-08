@@ -22,12 +22,12 @@ public class WriteDao {
 	private static PreparedStatement pst;
 	private static ResultSet rs;
 
-	public int add(UserInfo user, WriteInfo write) {
+	public int add(int stuNumber, WriteInfo write) {
 		String SQL = "insert into writeInfo values (?,?,getdate(),?)";
 		pst = DBUtil.getpst(SQL);
 		int num = 0;
 		try {
-			pst.setInt(1, user.getStuNumber());
+			pst.setInt(1, stuNumber);
 			pst.setString(2, write.getTitle());
 			pst.setString(3, write.getContent());
 			num = pst.executeUpdate();
@@ -64,7 +64,7 @@ public class WriteDao {
 	 public static List<WriteInfo> find_top2Bytime(int userNumber) {
 		 List<WriteInfo> list = new ArrayList<>();
 		 WriteInfo write = null;
-		 String sql = "select w.wid , w.title , w.creatTime , w.content from writeInfo w "
+		 String sql = "select top 2 w.wid , w.title ,w.userNumber, w.creatTime , w.content from writeInfo w "
 		 		+ " where w.userNumber =? order by w.creatTime desc";
 		 pst = DBUtil.getpst(sql);
 		 try {
@@ -80,7 +80,7 @@ public class WriteDao {
 		}finally {
 			DBUtil.close(rs);
 		}
-		 return null;
+		 return list;
 	 }
 	/**
 	 * 查询全部Byid
