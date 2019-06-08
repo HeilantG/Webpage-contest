@@ -66,14 +66,12 @@
 					<hr width="90%">
 					<ol>
 						<c:forEach items="${writelist}" var="w">
-							<li class="div1">
-								<div style="float: right;">
-									<a>帖子链接</a>
-								</div>
-								<div class="wname">${w.title}</div>
-								<div class="wcontent">帖子内容</div>
-								<div class="wdate">发帖时间</div>
-							</li>
+
+							<li class="div1"><a href="#">
+									<div class="wname" style="font-size: 16px;">${w.title}</div>
+							</a>
+								<div class="wcontent">${w.content}......</div>
+								<div class="wdate">${w.creatTime}</div></li>
 						</c:forEach>
 						<div class="textinfo1">
 							我的交易
@@ -81,23 +79,13 @@
 						</div>
 
 
-						<li class="div2">
-
-							<div style="float: right;">
-								<a>帖子链接</a>
-							</div>
-							<div class="wname">帖子名</div>
-							<div class="wcontent">帖子内容</div>
-							<div class="wdate">发帖时间</div>
-						</li>
-						<li class="div2">
-							<div style="float: right;">
-								<a>帖子链接</a>
-							</div>
-							<div class="wname">帖子名</div>
-							<div class="wcontent">帖子内容</div>
-							<div class="wdate">发帖时间</div>
-						</li>
+						<c:forEach items="${writelist}" var="w">
+							<li class="div2"><a href="#">
+									<div class="wname" style="font-size: 16px;">${w.title}</div>
+							</a>
+								<div class="wcontent">${w.content}......</div>
+								<div class="wdate">${w.creatTime}</div></li>
+						</c:forEach>
 					</ol>
 				</td>
 			</tr>

@@ -34,13 +34,20 @@ public class WriteServlet extends HttpServlet {
 			find_top2(request,response);
 		}else if("findAll_top10".equals(type)){
 			find_top10(request,response);
-		}else if("delete".equals(type)){
-			delete(request,response);
-		}else{
-			System.out.println("233");
 		}
-	
+//		else if("main".equals(type)){
+//			main(request,response);
+//		}
+//		else{
+//			System.out.println("233");
+//		}
+//	
 	}
+
+//	private void main(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+//		System.out.println("123");
+//		response.sendRedirect("index.jsp");
+//	}
 
 	/**
 	 * 根据日期查询前10个
@@ -83,9 +90,13 @@ public class WriteServlet extends HttpServlet {
 	 */
 	private void find_top2(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String stuNumber = request.getParameter("stuNumber");
-		List<WriteInfo> writelist = ws.find_top2Bytime(Integer.parseInt(stuNumber));
+		System.out.println();
+		List<WriteInfo> list = ws.find_top2Bytime(Integer.parseInt(stuNumber));
 		HttpSession session = request.getSession();
-		session.setAttribute("writelist", writelist);
+		session.setAttribute("writelist", list);
+		for (WriteInfo writeInfo : list) {
+			System.out.println(writeInfo);
+		}
 		request.getRequestDispatcher("jsp/Personal_information.jsp").forward(request, response);
 		
 	}
@@ -93,8 +104,24 @@ public class WriteServlet extends HttpServlet {
 	 * 添加
 	 * @param request
 	 * @param response
+	 * @throws IOException 
+	 * @throws ServletException 
 	 */
-	private void add(HttpServletRequest request, HttpServletResponse response) {
+	private void add(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		// 接收前台的学号
+//		String stuNumber = request.getParameter("stuNumber");
+		String stuNumber = "2018104396";
+		String title = request.getParameter("title");
+		String content = request.getParameter("content");
+		WriteInfo write = new WriteInfo(0, 0, title, null, content);
+		int i = ws.addtext(Integer.parseInt(stuNumber), write);
+		if(i>0){
+			System.out.println("成功！");
+			find_top10(request,response);
+		}else{
+			System.out.println("失败");
+		}
+		
 		
 	}
 

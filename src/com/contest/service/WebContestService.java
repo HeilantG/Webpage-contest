@@ -50,5 +50,11 @@ public class WebContestService {
 		return wdao.find_top2Bytime(userNumber);
 	}
 	
+	/**
+	 * 添加帖子
+	 */
+	public int addtext(int stuNumber,WriteInfo write) {
+		return wdao.add(stuNumber, write);
+	}
 	
 }

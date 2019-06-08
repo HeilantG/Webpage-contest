@@ -71,8 +71,17 @@ public class WriteDao {
 			pst.setInt(1, userNumber);
 			rs = pst.executeQuery();
 			while(rs.next()){
+				String sb = rs.getString("content");
+				String substring;
+				if (sb.length()>12) {
+					substring = sb.substring(0, 12);
+				} else {
+					substring=sb;
+				}
+					
+				
 				write = new WriteInfo(rs.getInt("wid"), rs.getInt("userNumber"), 
-						rs.getString("title"), rs.getDate("creatTime"), rs.getString("content"));
+						rs.getString("title"), rs.getDate("creatTime"), substring);
 				list.add(write);
 			}
 		} catch (SQLException e) {
