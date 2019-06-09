@@ -2,9 +2,12 @@ package com.contest.service;
 
 import java.util.List;
 
+import com.contest.dao.DealDao;
 import com.contest.dao.Select_retrun;
+import com.contest.dao.Select_retrunDeal;
 import com.contest.dao.UserDao;
 import com.contest.dao.WriteDao;
+import com.contest.model.DealInfo;
 import com.contest.model.UserInfo;
 import com.contest.model.WriteInfo;
 
@@ -17,6 +20,7 @@ public class WebContestService {
 	// 调用dao层对象
 	UserDao udao = new UserDao();
 	WriteDao wdao = new WriteDao();
+	DealDao dao = new DealDao();
 	/**
 	 * 登陆
 	 * @param user
@@ -55,6 +59,16 @@ public class WebContestService {
 	 */
 	public int addtext(int stuNumber,WriteInfo write) {
 		return wdao.add(stuNumber, write);
+	}
+	/**
+	 * 查询闲置交易帖子
+	 */
+	public Select_retrunDeal select_top10(){
+		 return dao.select_top10();
+	}
+	public List<DealInfo> select_top2(int userNumber){
+		
+		return dao.select_top2(userNumber);
 	}
 	
 }

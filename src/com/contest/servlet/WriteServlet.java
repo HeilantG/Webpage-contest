@@ -39,13 +39,11 @@ public class WriteServlet extends HttpServlet {
 //			main(request,response);
 //		}
 //		else{
-//			System.out.println("233");
 //		}
 //	
 	}
 
 //	private void main(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-//		System.out.println("123");
 //		response.sendRedirect("index.jsp");
 //	}
 
@@ -61,17 +59,13 @@ public class WriteServlet extends HttpServlet {
 		
 		List<WriteInfo> listwrite = sr.getListwrite();
 		List<UserInfo> listuser = sr.getListuser();
-		for (UserInfo userInfo : listuser) {
-			System.out.println(userInfo);
-		}
-		for (WriteInfo writeInfo : listwrite) {
-			System.out.println(writeInfo);
-		}
 		HttpSession session = request.getSession();
 		session.setAttribute("write", listwrite);
 		session.setAttribute("listuser", listuser);
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
+	
+
 	/**
 	 * 删除
 	 * @param request
@@ -90,13 +84,9 @@ public class WriteServlet extends HttpServlet {
 	 */
 	private void find_top2(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String stuNumber = request.getParameter("stuNumber");
-		System.out.println();
 		List<WriteInfo> list = ws.find_top2Bytime(Integer.parseInt(stuNumber));
 		HttpSession session = request.getSession();
 		session.setAttribute("writelist", list);
-		for (WriteInfo writeInfo : list) {
-			System.out.println(writeInfo);
-		}
 		request.getRequestDispatcher("jsp/Personal_information.jsp").forward(request, response);
 		
 	}
@@ -116,10 +106,8 @@ public class WriteServlet extends HttpServlet {
 		WriteInfo write = new WriteInfo(0, 0, title, null, content);
 		int i = ws.addtext(Integer.parseInt(stuNumber), write);
 		if(i>0){
-			System.out.println("成功！");
 			find_top10(request,response);
 		}else{
-			System.out.println("失败");
 		}
 		
 		

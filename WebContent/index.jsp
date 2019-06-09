@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8" />
 <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-<title>项目名</title>
+<title>苍蓝星</title>
 <link rel="stylesheet" href="css/index.css">
 <!-- Animate.css -->
 <link rel="stylesheet" href="css/login/animate.css">
@@ -33,9 +33,9 @@
 	<div class="sidebar" style="z-index: 10 !important;">
 		<a href="<%=request.getContextPath()%>/index.jsp"><img
 			class="logo" src="<%=request.getContextPath()%>/img/logo.png	"
-			width="60" align="absbottom" /></a> <span class="projectName">项目名</span>
+			width="60" align="absbottom" /></a> <span class="projectName">苍蓝星</span>
 		<span id=""> <a href="jsp/addtext.jsp"> GitHub </a>
-		</span> <span id=""> Welcome </span> <span class="sidebar_float">
+		</span> <a href="<%=request.getContextPath()%>/deal?type=select_top10" style="font-size:16px ;padding-left: 50px;"> Pornhub </a> <span class="sidebar_float">
 			<form action="" method="" class="sidebar_float_class" style="height: 60px;">
 				<span><input placeholder="全站搜索" class="selectall" /></span> <input
 					type="submit" name="" id="" class="btn-primary select" value="搜索" />
@@ -50,7 +50,7 @@
 					<a
 						href="${pageContext.request.contextPath }/write?type=find_top2&stuNumber=${user.stuNumber}
 "
-						class="sidebar_float_class">&emsp;${user.stuName }</a>
+						class="sidebar_float_class">&emsp;${user.realName }</a>
 					<a href="" class="sidebar_float_class"></a>
 				</c:if>
 			</form>
@@ -136,21 +136,18 @@
 					</div>
 				</div>
 			</header>
-
 		</div>
 	</c:if>
 	<!-- 论坛正文 -->
 	<div style="padding-top: 70px">
 		<c:forEach items="${write }" var="write" varStatus="i">
-			<div class="wtext">
-				<div class="">
+			<div class="wtext" >
 					<span id="" class="creatInformation"> 帖子ID:${write.wid }</span> <span
 						id="" class="creatInformation"> ${write.title }</span> <span id=""
 						class="creatInformation"> ${listuser[i.count-1].stuName } </span>
 					<span id="" class="creatInformation"> ${write.creatTime } </span> <span
 						id="" class="seeMore"> <a href="">查看详情</a>
 					</span>
-				</div>
 				<hr />
 				<div class="">${write.content }</div>
 			</div>

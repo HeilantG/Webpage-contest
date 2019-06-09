@@ -1,0 +1,67 @@
+.info{
+	padding-top: 100px;
+	width: 60%;
+	padding-left: 20%;
+	padding-right: 20%;
+	
+}	
+.username{
+	font-size: 26px ;
+    line-height: 30px ;
+	font-weight: 600 ;
+	color: #24292e ;
+}
+.userid{
+	color: #24292e ;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 50px;
+}
+.textinfo{
+	margin-left:50px;
+	width: 30px
+}
+.userinfo{
+	width: 20%;
+	
+}
+.textinfo{
+	width: 100%;
+	height: 20px;
+	float: left;
+}
+.textinfo1{
+	width: 104%;
+	height: 20px;
+	float: left;
+	margin-left: 10px;
+}
+ol{
+	list-style: none;
+}
+.div1{
+	margin-left:5%;
+	float: left; width: 43%;
+	border-top: 1px solid black!important;
+	border-bottom: 1px solid black!important;
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+.div2{
+	margin-left:5%;
+	float: left; width: 43%;
+	border-top: 1px solid black!important;
+	border-bottom: 1px solid black!important;
+	margin-top: 70px;
+}
+#footer{
+   position: absolute;  bottombottom: 0; /* 关键 */     
+   width:100%;  
+   height: 60px;         /* footer的高度一定要是固定值*/     
+}
+body{
+	 position: relative;   /*重要！保证footer是相对于wapper位置绝对*/     
+    height: auto;          /* 保证页面能撑开浏览器高度时显示正常*/         
+}  

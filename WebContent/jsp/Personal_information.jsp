@@ -22,9 +22,11 @@
 	<div class="sidebar" style="z-index: 10 !important;">
 		<a href="<%=request.getContextPath()%>/index.jsp"><img
 			class="logo" src="<%=request.getContextPath()%>/img/logo.png	"
-			width="60" align="absbottom" /></a> <span class="projectName">项目名</span>
+			width="60" align="absbottom" /></a> <span class="projectName">SPlus</span>
 		<span id=""> <a href="jsp/addtext.jsp"> GitHub </a>
-		</span> <span id=""> Welcome </span> <span class="sidebar_float">
+		</span> <a href="<%=request.getContextPath()%>/deal?type=select_top10"
+			style="font-size: 16px; padding-left: 50px;"> Pornhub </a> <span
+			class="sidebar_float">
 			<form action="" method="" class="sidebar_float_class"
 				style="height: 60px;">
 				<span><input placeholder="全站搜索" class="selectall" /></span> <input
@@ -38,9 +40,8 @@
 				</c:if>
 				<c:if test="${user.stuNumber!=null}">
 					<a
-						href="${pageContext.request.contextPath }/write?type=find_top2&stuNumber=${user.stuNumber}
-"
-						class="sidebar_float_class">&emsp;${user.stuName }</a>
+						href="${pageContext.request.contextPath }/write?type=find_top2&stuNumber=${user.stuNumber}"
+						class="sidebar_float_class">&emsp;${user.realName }</a>
 					<a href="" class="sidebar_float_class"></a>
 				</c:if>
 			</form>
@@ -53,8 +54,8 @@
 			<tr>
 				<td class="userinfo"><img src="img/布洛尼亚.png" width="250px"
 					border="1px">
-					<div class="username">大滑稽</div>
-					<div class="userid">2018104399</div>
+					<div class="username">${user.realName }</div>
+					<div class="userid">${user.stuNumber}</div>
 					<div id="">
 						<i class="fa fa-address-book"></i>&emsp;管理员
 					</div> <i class="fa fa-location-arrow"></i>&emsp;陕西,咸阳

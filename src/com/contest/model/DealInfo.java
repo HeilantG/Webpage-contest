@@ -1,4 +1,7 @@
 package com.contest.model;
+
+import java.sql.Date;
+
 /**
  * 闲置交易表实体类
  * @author Star
@@ -23,10 +26,12 @@ public class DealInfo {
 	private float money;
 	private String remarks;
 	private String savepath;
+	private Date createTime;
 	public DealInfo() {
 		super();
 	}
-	public DealInfo(int cid, int userNumber, String cName, String type, float money, String remarks, String savepath) {
+	public DealInfo(int cid, int userNumber, String cName, String type, float money, String remarks, String savepath,
+			Date createTime) {
 		super();
 		this.cid = cid;
 		this.userNumber = userNumber;
@@ -35,6 +40,7 @@ public class DealInfo {
 		this.money = money;
 		this.remarks = remarks;
 		this.savepath = savepath;
+		this.createTime = createTime;
 	}
 	public int getCid() {
 		return cid;
@@ -78,11 +84,17 @@ public class DealInfo {
 	public void setSavepath(String savepath) {
 		this.savepath = savepath;
 	}
+	public Date getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
 	@Override
 	public String toString() {
 		return "DealInfo [cid=" + cid + ", userNumber=" + userNumber + ", cName=" + cName + ", type=" + type
-				+ ", money=" + money + ", remarks=" + remarks + ", savepath=" + savepath + "]";
+				+ ", money=" + money + ", remarks=" + remarks + ", savepath=" + savepath + ", createTime=" + createTime
+				+ "]";
 	}
-	
 	
 }

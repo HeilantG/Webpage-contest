@@ -6,11 +6,13 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
-<title>发帖</title>
-<link rel="stylesheet" href="../css/index.css">
-<link rel="stylesheet" href="../css/login/style.css">
-<link rel="stylesheet" href="../css/page_style_all.css">
+<link rel="shortcut icon" type="../image/x-icon" href="../img/favicon.ico" />
+<title>闲置交易</title>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/login/style.css">
+<link rel="stylesheet" href="css/page_style_all.css">
+
+<link rel="stylesheet" href="css/exchange.css">
 
 
 <script src="js/modernizr-2.6.2.min.js"></script>
@@ -68,8 +70,8 @@ textarea {
 		<a href="<%=request.getContextPath()%>/index.jsp"><img
 			class="logo" src="<%=request.getContextPath()%>/img/logo.png	"
 			width="60" align="absbottom" /></a> <span class="projectName">苍蓝星</span>
-		<span id=""> <a href="#"> 发帖 </a>
-		</span> <a href="<%=request.getContextPath()%>/deal?type=select_top10" style="font-size:16px ;padding-left: 50px;"> 闲置交易 </a> <span class="sidebar_float">
+		<span id=""> <a href="jsp/addtext.jsp"> GitHub </a>
+		</span> <a href="<%=request.getContextPath()%>/deal?type=select_top10" style="font-size:16px ;padding-left: 50px;"> Pornhub </a> <span class="sidebar_float">
 			<form action="" method="" class="sidebar_float_class" style="height: 60px;">
 				<span><input placeholder="全站搜索" class="selectall" /></span> <input
 					type="submit" name="" id="" class="btn-primary select" value="搜索" />
@@ -90,19 +92,25 @@ textarea {
 			</form>
 		</span>
 	</div>
-	<!-- 添加 -->
-	<div class="addtext" align="center" style="background-color: #ececec">
-		<form action="${pageContext.request.contextPath }/write?type=add"
-			method="post">
-			<ul>
-				<li><span>标题&emsp;</span><input type="text" class="input"
-					name="title" style="height: 50px; font-size: 25px" /></li>
-				<br>
-				<li><span>正文&emsp;</span> <textarea name="content"
-						required="required" placeholder="在这里写你想说的话" rows="10" cols="67" /></textarea></li>
-			</ul>
-			<input type="submit" value="发帖" class="sub" />
-		</form>
+	<!-- 交换物品信息 -->
+	<div class="info">
+		<c:forEach items="${listdeal}" var="c" varStatus="i">
+			<table bgcolor="#ececec"
+				style="margin-bottom: 80px; border: 1px solid #d1d5da;">
+				<tr>
+					<td class="userinfo"><img src="img/c/c${i.count}.png" width="100px">
+					<img alt="" src="">
+						<div class="username ">${c.cName}</div> <i class="fa fa-cny"></i><span
+						class="userid">&emsp;${c.money}</span>
+						<div id="">
+							<i class="fa fa-cny"></i>&emsp;${c.type}
+						</div> <i class="fa fa-location-arrow"></i>&emsp;陕西,咸阳</td>
+					<td>
+						<div>${c.remarks }</div>
+					</td>
+				</tr>
+			</table>
+		</c:forEach>
 	</div>
 	<br>
 	<br>
