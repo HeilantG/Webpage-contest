@@ -87,6 +87,9 @@ public class WriteServlet extends HttpServlet {
 		List<WriteInfo> list = ws.find_top2Bytime(Integer.parseInt(stuNumber));
 		HttpSession session = request.getSession();
 		session.setAttribute("writelist", list);
+		DealServlet deal = new DealServlet();
+		// 调用DealServlet中的查询方法
+		deal.select(request, response);
 		request.getRequestDispatcher("jsp/Personal_information.jsp").forward(request, response);
 		
 	}
@@ -99,15 +102,17 @@ public class WriteServlet extends HttpServlet {
 	 */
 	private void add(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		// 接收前台的学号
-//		String stuNumber = request.getParameter("stuNumber");
-		String stuNumber = "2018104396";
+		String stuNumber = request.getParameter("stuNumber");
+//		String stuNumber = "2018104396";
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
 		WriteInfo write = new WriteInfo(0, 0, title, null, content);
 		int i = ws.addtext(Integer.parseInt(stuNumber), write);
 		if(i>0){
+			
 			find_top10(request,response);
 		}else{
+			response.sendRedirect("index.jsp");
 		}
 		
 		

@@ -23,9 +23,9 @@
 		<a href="<%=request.getContextPath()%>/index.jsp"><img
 			class="logo" src="<%=request.getContextPath()%>/img/logo.png	"
 			width="60" align="absbottom" /></a> <span class="projectName">SPlus</span>
-		<span id=""> <a href="jsp/addtext.jsp"> GitHub </a>
+		<span id=""> <a href="jsp/addtext.jsp"> 发帖 </a>
 		</span> <a href="<%=request.getContextPath()%>/deal?type=select_top10"
-			style="font-size: 16px; padding-left: 50px;"> Pornhub </a> <span
+			style="font-size: 16px; padding-left: 50px;"> 闲置交易 </a> <span
 			class="sidebar_float">
 			<form action="" method="" class="sidebar_float_class"
 				style="height: 60px;">
@@ -52,7 +52,7 @@
 	<div class="info">
 		<table bgcolor="#ececec" style="margin-bottom: 80px">
 			<tr>
-				<td class="userinfo"><img src="img/布洛尼亚.png" width="250px"
+				<td class="userinfo"><img src="img/anime.png" width="250px"
 					border="1px">
 					<div class="username">${user.realName }</div>
 					<div class="userid">${user.stuNumber}</div>
@@ -80,12 +80,12 @@
 						</div>
 
 
-						<c:forEach items="${writelist}" var="w">
+						<c:forEach items="${deallist}" var="d">
 							<li class="div2"><a href="#">
-									<div class="wname" style="font-size: 16px;">${w.title}</div>
+									<div class="wname" style="font-size: 16px;">${d.cName}</div>
 							</a>
-								<div class="wcontent">${w.content}......</div>
-								<div class="wdate">${w.creatTime}</div></li>
+								<div class="wcontent">${d.money}</div>
+								<div class="wdate">${d.remarks}......</div></li>
 						</c:forEach>
 					</ol>
 				</td>

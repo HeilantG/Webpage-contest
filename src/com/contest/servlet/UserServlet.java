@@ -63,7 +63,7 @@ public class UserServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			// 返回值前台参数
 			session.setAttribute("login", login);
-			request.getRequestDispatcher("index.jsp").forward(request, response);
+			login(request,response);
 		}else{
 			request.setAttribute("fail", "注册失败了");
 			request.getRequestDispatcher("index.jsp").forward(request, response);

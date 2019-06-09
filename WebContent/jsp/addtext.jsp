@@ -96,7 +96,9 @@ textarea {
 			method="post">
 			<ul>
 				<li><span>标题&emsp;</span><input type="text" class="input"
-					name="title" style="height: 50px; font-size: 25px" /></li>
+					name="title" style="height: 50px; font-size: 25px" />
+					<input type="hidden" name="stuNumber" value="${user.stuNumber }"/>
+					</li>
 				<br>
 				<li><span>正文&emsp;</span> <textarea name="content"
 						required="required" placeholder="在这里写你想说的话" rows="10" cols="67" /></textarea></li>

@@ -34,8 +34,8 @@
 		<a href="<%=request.getContextPath()%>/index.jsp"><img
 			class="logo" src="<%=request.getContextPath()%>/img/logo.png	"
 			width="60" align="absbottom" /></a> <span class="projectName">苍蓝星</span>
-		<span id=""> <a href="jsp/addtext.jsp"> GitHub </a>
-		</span> <a href="<%=request.getContextPath()%>/deal?type=select_top10" style="font-size:16px ;padding-left: 50px;"> Pornhub </a> <span class="sidebar_float">
+		<span id=""> <a href="jsp/addtext.jsp"> 发帖 </a>
+		</span> <a href="<%=request.getContextPath()%>/deal?type=select_top10" style="font-size:16px ;padding-left: 50px;"> 闲置交易 </a> <span class="sidebar_float">
 			<form action="" method="" class="sidebar_float_class" style="height: 60px;">
 				<span><input placeholder="全站搜索" class="selectall" /></span> <input
 					type="submit" name="" id="" class="btn-primary select" value="搜索" />

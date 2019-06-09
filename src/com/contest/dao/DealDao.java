@@ -51,8 +51,9 @@ public class DealDao {
 	 public List<DealInfo> select_top2(int userNumber) {
 		 List<DealInfo> list = new ArrayList<>();
 		 DealInfo deal = null;
-		 String sql = "select top 2 d.cid,d.userNumber,d.cName,d.type,d.money,d.remarks,d.savepath ,d.createTime "
-		 		+ "from dealInfo d,userInfo u where d.userNumber =? order by d.createTime desc";
+		 String sql = "select top 2 d.cid,d.userNumber,d.cName,d.type,d.money,d.remarks,d.savepath ,d.createTime  "
+		 		+ "from dealInfo d,userInfo u  where d.userNumber =? and d.userNumber = u.stuNumber "
+		 		+ "order by d.createTime desc";
 		 pst = DBUtil.getpst(sql);
 		 try {
 			pst.setInt(1, userNumber);
